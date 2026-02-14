@@ -52,12 +52,12 @@ You'll need:
 5. Save your Client ID and Client Secret
 
 ### Step 2: Fork the Code (2 minutes)
-1. Visit the template: [Ai-Chat-MERN-Template](https://github.com/Nexlayer/Ai-Chat-MERN-Template)
+1. Visit the template: [Gemini-Ai-Chat-MERN-Template](https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template)
 2. Click "Fork" in the top-right corner
 3. Choose your account as the destination
 
 ### Step 3: Configure Your App (3 minutes)
-1. Clone your fork: `git clone https://github.com/YOUR-USERNAME/Ai-Chat-MERN-Template.git`
+1. Clone your fork: `git clone https://github.com/YOUR-USERNAME/Gemini-Ai-Chat-MERN-Template.git`
 2. Open `nexlayer.yaml` and replace placeholder values with your real API keys
 3. Choose your unique app name (becomes part of your website URL)
 
@@ -163,8 +163,8 @@ Here's the magic of Nexlayer - all these services discover and connect to each o
 
 ```bash
 # Clone the repository
-git clone https://github.com/Nexlayer/Ai-Chat-MERN-Template
-cd Ai-Chat-MERN-Template
+git clone https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template
+cd Gemini-Ai-Chat-MERN-Template
 
 # Install dependencies
 cd server && npm install
@@ -368,16 +368,14 @@ docker login ghcr.io -u <github-username> -p <PAT-GithubWritePrivileges>
 Build and push backend:
 ```bash
 cd <repo-dir>
-docker build -t gemini-ai-chatapp-backend:v0.1 -f ./server/Dockerfile ./server
-docker tag gemini-ai-chatapp-backend:v0.1 ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1
-docker push ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1
+docker build -t registry.nexlayer.io/nexlayer-mcp/nexlayer/gemini-ai-chat-server:20260214 -f ./server/Dockerfile ./server
+docker push registry.nexlayer.io/nexlayer-mcp/nexlayer/gemini-ai-chat-server:20260214
 ```
 
 Build and push frontend:
 ```bash
-docker build -t gemini-ai-chatapp-frontend:v0.1 -f ./client-fe/Dockerfile ./client-fe
-docker tag gemini-ai-chatapp-frontend:v0.1 ghcr.io/nexlayer/gemini-ai-chatapp-frontend:v0.1
-docker push ghcr.io/nexlayer/gemini-ai-chatapp-frontend:v0.1
+docker build -t registry.nexlayer.io/nexlayer-mcp/nexlayer/gemini-ai-chat-client:20260214 -f ./client-fe/Dockerfile ./client-fe
+docker push registry.nexlayer.io/nexlayer-mcp/nexlayer/gemini-ai-chat-client:20260214
 ```
 
 ## 🔧 Troubleshooting Common Issues

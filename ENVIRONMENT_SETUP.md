@@ -5,7 +5,7 @@ This guide explains how to set up environment variables for the Nexlayer AI Chat
 ## 📁 Environment Files Structure
 
 ```
-Stellar-Ai-Chat-MERN-Template/
+Gemini-Ai-Chat-MERN-Template/
 ├── client-fe/
 │   ├── .env.example          # Frontend environment template (safe to commit)
 │   └── .env                  # Frontend environment variables (DO NOT COMMIT)
