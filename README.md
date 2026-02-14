@@ -191,6 +191,29 @@ The application uses environment variables for configuration. See [ENVIRONMENT_S
 - `server/.env` - Backend environment variables
 - `client-fe/.env` - Frontend environment variables
 
+## 🔌 Update Your MCP Configuration (Cursor)
+
+Follow the instructions below to update your existing MCP setup in Cursor.
+
+1. Navigate to **Cursor Settings → Tools & MCP**
+2. Hover over the installed **"nexlayer-mcp"** MCP server and select the edit icon
+3. Remove the **"headers"** object from your configuration so that the new configuration reads:
+
+```json
+{
+  "mcpServers": {
+    "nexlayer-mcp": {
+      "url": "https://mcp.nexlayer.ai/api/mcp"
+    }
+  }
+}
+```
+
+4. Save the file and navigate back to the **Tools & MCP** settings
+5. Click the **"Connect"** button to authenticate with the Nexlayer MCP server. If the "Connect" button re-appears, select the text **"Needs authentication"** under the nexlayer-mcp name and select **"Open"**
+6. Login with one of the SSO providers. You will be redirected back to Cursor
+7. You are now authenticated and ready to use the Nexlayer MCP!
+
 ## 🚀 Development
 
 ### Local Development
