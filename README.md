@@ -1,4 +1,4 @@
-# StellarStack Gemini AI Chat Template
+# Gemini AI Chat Template
 A production-ready MERN stack template for building AI-powered chat applications, developed with ❤️ by Team [StellarStackLtd](https://stellarstack.co) For [Nexlayer](https://nexlayer.com) Community. This template provides a robust foundation for creating interactive chat experiences using Google's Gemini Pro API, featuring modern authentication, real-time chat capabilities, and scalable architecture.
 
 ## 📋 Table of Contents
@@ -52,12 +52,12 @@ You'll need:
 5. Save your Client ID and Client Secret
 
 ### Step 2: Fork the Code (2 minutes)
-1. Visit the template: [Stellar-Ai-Chat-MERN-Template](https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template)
+1. Visit the template: [Ai-Chat-MERN-Template](https://github.com/Nexlayer/Ai-Chat-MERN-Template)
 2. Click "Fork" in the top-right corner
 3. Choose your account as the destination
 
 ### Step 3: Configure Your App (3 minutes)
-1. Clone your fork: `git clone https://github.com/YOUR-USERNAME/Stellar-Ai-Chat-MERN-Template.git`
+1. Clone your fork: `git clone https://github.com/YOUR-USERNAME/Ai-Chat-MERN-Template.git`
 2. Open `nexlayer.yaml` and replace placeholder values with your real API keys
 3. Choose your unique app name (becomes part of your website URL)
 
@@ -102,7 +102,7 @@ project/
 
 ## Description
 
-StellarStack AI Chat Template is a comprehensive solution for building AI chat applications, providing:
+ Gemini AI Chat Template is a comprehensive solution for building AI chat applications, providing:
 
 1. **User Authentication:**
    - Google OAuth V2 integration
@@ -123,7 +123,7 @@ StellarStack AI Chat Template is a comprehensive solution for building AI chat a
 
 ## 🗺️ Architecture Overview
 
-![stellar-stack-mern-ai-chat-stack](https://github.com/user-attachments/assets/b415672c-e296-4ecb-a2ef-18a255c5347d)
+![mern-Gemini-chat-stack](https://github.com/user-attachments/assets/b415672c-e296-4ecb-a2ef-18a255c5347d)
 
 This structure shows you how Nexlayer organizes your application into distinct, manageable pieces. Each pod has its own responsibility and configuration, but they all work together as one cohesive app.
 
@@ -163,8 +163,8 @@ Here's the magic of Nexlayer - all these services discover and connect to each o
 
 ```bash
 # Clone the repository
-git clone https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template.git
-cd Stellar-Ai-Chat-MERN-Template
+git clone https://github.com/Nexlayer/Ai-Chat-MERN-Template
+cd Ai-Chat-MERN-Template
 
 # Install dependencies
 cd server && npm install
