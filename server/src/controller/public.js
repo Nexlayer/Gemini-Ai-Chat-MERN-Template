@@ -37,19 +37,25 @@ export const postGemini = async (req, res, next) => {
   let history = [
     {
       role: "user",
-      parts: "Hello, who are you.",
+      parts: [{ text: "Hello, who are you." }],
     },
     {
       role: "model",
-      parts: "I am a large language model, trained by Google.",
+      parts: [{ text: "I am a large language model, trained by Google." }],
     },
   ];
 
-  if (previousChat.length > 0) history = [...history, ...previousChat];
+  if (previousChat.length > 0) {
+    const formattedPrevChat = previousChat.map((chat) => ({
+      role: chat.role,
+      parts: typeof chat.parts === "string" ? [{ text: chat.parts }] : Array.isArray(chat.parts) ? chat.parts.map(p => typeof p === "string" ? { text: p } : p) : chat.parts,
+    }));
+    history = [...history, ...formattedPrevChat];
+  }
 
   const genAi = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-  const model = genAi.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAi.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   const chats = model.startChat({
     history: history,
@@ -59,11 +65,24 @@ export const postGemini = async (req, res, next) => {
   let newChatHistoryId;
   let chatId;
 
-  chats
-    .sendMessage(query)
-    .then((result) => {
-      return result.response;
-    })
+  let result;
+  try {
+    result = await chats.sendMessage(query);
+  } catch (apiErr) {
+    if (apiErr.status === 429) {
+      const error = new Error(
+        "Gemini API quota exceeded. Your free tier limit has been reached. " +
+        "Please check your plan and billing at https://ai.google.dev/gemini-api/docs/rate-limits"
+      );
+      error.statusCode = 429;
+      return next(error);
+    }
+    const error = new Error("Failed to get response from Gemini API: " + apiErr.message);
+    error.statusCode = 502;
+    return next(error);
+  }
+
+  Promise.resolve(result.response)
     .then((response) => {
       text = response.text();
 

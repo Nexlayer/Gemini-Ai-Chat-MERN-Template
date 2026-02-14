@@ -1,6 +1,6 @@
-# Contributing to StellarStack AI Chat Template
+# Contributing to Nexlayer AI Chat Template
 
-Thank you for your interest in contributing to StellarStack AI Chat Template! This document provides guidelines and instructions for contributing to this project.
+Thank you for your interest in contributing to Nexlayer AI Chat Template! This document provides guidelines and instructions for contributing to this project.
 
 ## Code of Conduct
 
@@ -37,7 +37,7 @@ By participating in this project, you agree to abide by our Code of Conduct. Ple
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template.git
+   git clone https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template.git
    ```
 
 2. Install dependencies:
@@ -85,9 +85,9 @@ By participating in this project, you agree to abide by our Code of Conduct. Ple
 
 ## Getting Help
 
-- Check the [Wiki](https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template/wiki)
+- Check the [Wiki](https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template/wiki)
 - Open an issue for questions
-- Contact support@stellarstackltd.com
+- Contact support@nexlayer.com
 
 ## License
 

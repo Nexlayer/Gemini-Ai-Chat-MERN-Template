@@ -13,7 +13,7 @@
     "nodemailer": "^6.9.10",
     "request-ip": "^3.3.0"
   },
-  "name": "@stellarstackltd/ai-chat-api",
+  "name": "gemini-ai-chat-api",
   "type": "module",
   "version": "1.0.0",
   "main": "app.js",
@@ -31,19 +31,19 @@
     "format": "prettier --write .",
     "build": "babel src -d dist"
   },
-  "author": "StellarStackLtd",
+  "author": "NexLayer",
   "license": "MIT",
-  "description": "Backend API for StellarStack AI Chat Template - A production-ready MERN stack template for AI-powered chat applications",
+  "description": "Backend API for NexLayer AI Chat Template - A production-ready MERN stack template for AI-powered chat applications",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template.git"
+    "url": "https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template"
   },
   "keywords": [
     "ai",
     "chat",
     "mern",
     "template",
-    "stellarstack",
+    "nexlayer",
     "gemini",
     "api"
   ]

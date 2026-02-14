@@ -2,7 +2,7 @@ application:
     name: "server"
     pods:
         - name: web
-          image: ghcr.io/stellarstack/stellar-gemini-ai-chatapp-backend:v0.1
+          image: ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1
           path: /
           servicePorts:
             - 8080

@@ -1,5 +1,5 @@
 # Gemini AI Chat Template
-A production-ready MERN stack template for building AI-powered chat applications, developed with ❤️ by Team [StellarStackLtd](https://stellarstack.co) For [Nexlayer](https://nexlayer.com) Community. This template provides a robust foundation for creating interactive chat experiences using Google's Gemini Pro API, featuring modern authentication, real-time chat capabilities, and scalable architecture.
+A production-ready MERN stack template for building AI-powered chat applications, developed with ❤️ by [Nexlayer](https://nexlayer.com). This template provides a robust foundation for creating interactive chat experiences using Google's Gemini Pro API, featuring modern authentication, real-time chat capabilities, and scalable architecture.
 
 ## 📋 Table of Contents
 
@@ -368,16 +368,16 @@ docker login ghcr.io -u <github-username> -p <PAT-GithubWritePrivileges>
 Build and push backend:
 ```bash
 cd <repo-dir>
-docker build -t stellar-gemini-ai-chatapp-backend:v0.1 -f ./server/Dockerfile ./server
-docker tag stellar-gemini-ai-chatapp-backend:v0.1 ghcr.io/stellarstack/stellar-gemini-ai-chatapp-backend:v0.1
-docker push ghcr.io/stellarstack/stellar-gemini-ai-chatapp-backend:v0.1
+docker build -t gemini-ai-chatapp-backend:v0.1 -f ./server/Dockerfile ./server
+docker tag gemini-ai-chatapp-backend:v0.1 ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1
+docker push ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1
 ```
 
 Build and push frontend:
 ```bash
-docker build -t stellar-gemini-ai-chatapp-frontend:v0.1 -f ./client-fe/Dockerfile ./client-fe
-docker tag stellar-gemini-ai-chatapp-frontend:v0.1 ghcr.io/stellarstack/stellar-gemini-ai-chatapp-frontend:v0.1
-docker push ghcr.io/stellarstack/stellar-gemini-ai-chatapp-frontend:v0.1
+docker build -t gemini-ai-chatapp-frontend:v0.1 -f ./client-fe/Dockerfile ./client-fe
+docker tag gemini-ai-chatapp-frontend:v0.1 ghcr.io/nexlayer/gemini-ai-chatapp-frontend:v0.1
+docker push ghcr.io/nexlayer/gemini-ai-chatapp-frontend:v0.1
 ```
 
 ## 🔧 Troubleshooting Common Issues
@@ -481,9 +481,9 @@ For detailed documentation, visit our [Nexlayer Docs](https://docs.nexlayer.com/
 ## Support
 
 - Documentation: [Environment Setup Guide](ENVIRONMENT_SETUP.md)
-- Issues: [GitHub Issues](https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template/issues)
-- Email: support@stellarstackltd.com
-- Community: [GitHub Discussions](https://github.com/StellarStack/Stellar-Ai-Chat-MERN-Template/discussions)
+- Issues: [GitHub Issues](https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template/issues)
+- Email: support@nexlayer.com
+- Community: [GitHub Discussions](https://github.com/Nexlayer/Gemini-Ai-Chat-MERN-Template/discussions)
 
 ## 📄 License
 
@@ -511,4 +511,4 @@ This template is licensed under the MIT License - see the [LICENSE](LICENSE) fil
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
 [![Nexlayer](https://img.shields.io/badge/Deploy%20on-Nexlayer-orange.svg)](https://nexlayer.com/)
 
-**Built with ❤️ using the [StellarStackLtd](https://stellarstack.co) AI Chat Template**
+**Built with ❤️ using the [Nexlayer](https://nexlayer.com) AI Chat Template**

@@ -7,8 +7,8 @@ on:
   workflow_dispatch:  # Allow manual triggering
 
 env:
-  BACKEND_IMAGE_NAME: stellar-gemini-ai-chatapp-backend
-  FRONTEND_IMAGE_NAME: stellar-gemini-ai-chatapp-frontend
+  BACKEND_IMAGE_NAME: gemini-ai-chatapp-backend
+  FRONTEND_IMAGE_NAME: gemini-ai-chatapp-frontend
 
 jobs:
   build-and-deploy:
@@ -36,7 +36,7 @@ jobs:
         id: backendMeta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/stellarstack/${{ env.BACKEND_IMAGE_NAME }}
+          images: ghcr.io/nexlayer/${{ env.BACKEND_IMAGE_NAME }}
           tags: |
             type=sha,prefix=,format=short
             type=raw,value=latest,enable={{is_default_branch}}
@@ -57,7 +57,7 @@ jobs:
         id: frontendMeta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/stellarstack/${{ env.FRONTEND_IMAGE_NAME }}
+          images: ghcr.io/nexlayer/${{ env.FRONTEND_IMAGE_NAME }}
           tags: |
             type=sha,prefix=,format=short
             type=raw,value=latest,enable={{is_default_branch}}
@@ -79,10 +79,10 @@ jobs:
           SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)
           
           # Update the backend image in nexlayer.yaml
-          sed -i "s|image: ghcr.io/stellarstack/stellar-gemini-ai-chatapp-backend:v0.1|image: ghcr.io/stellarstack/${{ env.BACKEND_IMAGE_NAME }}:$SHORT_SHA|" nexlayer.yaml
+          sed -i "s|image: ghcr.io/nexlayer/gemini-ai-chatapp-backend:v0.1|image: ghcr.io/nexlayer/${{ env.BACKEND_IMAGE_NAME }}:$SHORT_SHA|" nexlayer.yaml
 
           # Update the frontend image in nexlayer.yaml
-          sed -i "s|image: ghcr.io/stellarstack/stellar-gemini-ai-chatapp-frontend:v0.1|image: ghcr.io/stellarstack/${{ env.FRONTEND_IMAGE_NAME }}:$SHORT_SHA|" nexlayer.yaml
+          sed -i "s|image: ghcr.io/nexlayer/gemini-ai-chatapp-frontend:v0.1|image: ghcr.io/nexlayer/${{ env.FRONTEND_IMAGE_NAME }}:$SHORT_SHA|" nexlayer.yaml
           
           # Display the updated file for verification
           cat nexlayer.yaml

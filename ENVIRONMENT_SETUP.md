@@ -1,6 +1,6 @@
 # Environment Setup Guide
 
-This guide explains how to set up environment variables for the StellarStack AI Chat MERN Template, from local development to production deployment.
+This guide explains how to set up environment variables for the Nexlayer AI Chat MERN Template, from local development to production deployment.
 
 ## 📁 Environment Files Structure
 

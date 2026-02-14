@@ -27,8 +27,8 @@ app.use(cros(crosOption));
 import publicRoutes from "./router/public.js";
 import authRoutes from "./router/auth.js";
 
-app.use("/v1/gemini", publicRoutes);
-app.use("/v1", authRoutes);
+app.use("/gemini", publicRoutes);
+app.use("", authRoutes);
 
 // Serve static files from the React app build at /chatapp
 //app.use("/chatapp", express.static(path.join(__dirname, "../../client-fe/build")));
